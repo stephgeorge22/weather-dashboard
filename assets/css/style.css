@@ -1,0 +1,140 @@
+:root {
+    --border-radius: .3rem;
+  }
+
+* {
+box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  line-height: 1.25;
+}
+
+.hero {
+    padding: 3% 4%;
+    background-color: olive;
+    color: rgb(238, 238, 227);
+}
+
+.app-title {
+    font-size: 3rem;
+    background-color: olive;
+    color: rgb(238, 238, 227);
+    padding: 0 10px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+}
+
+/* FONT UTILS */
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+main {
+    margin: 20px auto;
+    width: 94%;
+}
+
+.btn {
+    font-size: 1.3rem;
+    text-decoration:none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: rgb(74, 74, 153);
+    border: none;
+    outline: none;
+    background-color: rgb(238, 238, 227);
+    box-shadow: 3px 3px olive;
+    transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+    color: rgb(238, 238, 227);
+    background-color: olive;
+    transform: translate(0, 0);
+    box-shadow: 2px 2px gray;
+    }
+
+.btn-inline {
+    display: inline;
+}
+
+.btn-back {
+    border-radius: var(--border-radius);
+    color: olive;
+    border: none;
+    outline: none;
+    background-color: gray;
+    box-shadow: rgb(238, 238, 227);
+    transform: translate(-1px, -1px);
+    display: inline-block;
+    width: auto;
+    margin-top: 20px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.btn-back:hover {
+    color:  gray;
+    background-color:  rgb(238, 238, 227);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px olive;
+}
+
+/* CARDS */
+.card {
+    margin: 0 0 20px 0;
+    border: 3px solid olive;
+    border-radius: var(--border-radius);
+}
+  
+.card-header {
+    color: rgb(238, 238, 227);
+    background-color: olive;
+    padding: 2.5%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+}
+  
+.card-body {
+    padding: 2.5%;
+}
+
+/* FORM */
+.form-label,
+.form-input,
+.form-textarea {
+  display: block;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  margin: 0 0 0 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 3%;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border: 2px solid olive;
+  border-radius: var(--border-radius);
+}
