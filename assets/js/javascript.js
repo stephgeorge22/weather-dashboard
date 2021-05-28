@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         getWeather(city);
 
-        getFive(city);
+        
 
         //prevent button click from sending browser to new url
         return false; 
@@ -69,6 +69,8 @@ var getWeather = function(city) {
 
     getUV(long, lat);
 
+    getFive(long, lat);
+
     });
 };
 
@@ -104,10 +106,10 @@ var getUV = function(long, lat) {
     });
 };
 
-var getFive = function(city) {
+var getFive = function(long, lat) {
      // format the github api url
-     var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
-
+     var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&exclude=current,minutely,hourly,alerts&appid=" + apiKey;
+     
      var info = {
          "async": true,
          "crossDomain": true,
