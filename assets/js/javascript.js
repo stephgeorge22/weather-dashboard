@@ -14,6 +14,13 @@ $(document).ready(function () {
         // store inputs
         localStorage.setItem(location, city);
 
+        // display city name 
+        $("#temp").append(city);
+
+        // display current date 
+        var date = moment().format('MMM Do YYYY');
+        $("#temp").append(date);
+
         getWeather(city);
 
         //prevent button click from sending browser to new url
@@ -43,17 +50,19 @@ var getWeather = function(city) {
     $("#temp").append($('<img>',{id:'temp',src:url}));
 
     // display temperature
-    var temp = response.main.temp
+    var temp = response.main.temp;
     $("#temp").append("Temp:" + temp + "°F");
-    });
-
-    // display city name 
-    
-    // display current date
 
     // display humidity 
+    var humidity = response.main.humidity;
+    $("#temp").append("Humidity:" + humidity);
 
     // display wind speed
+    var windSpeed = response.wind.speed; 
+    $("#temp").append("Wind Speed:" + windSpeed);
+
+
+    });
 
     // display uv index 
 
