@@ -22,24 +22,83 @@
             <h1 class="app-title"><i class="fab fa-github"></i> Weather Dashboard</h1>
         </header>
 
-        <main class="flex-row justify-space-between row">
+        <main class="flex-row justify-space-between">
+
+            <div class=row>
 
             <div class="col-12 col-md-4">
-                <div class="card">
-                    <h3 class="card-header text-uppercase">Search By City</h3>
-                    <form id="user-form" class="card-body">
-                        <input name="userCity" id="userCity" type="text" autofocus="true" class="form-input" />
-                        <button type="submit" class="btn">Search</button>
-                    </form>
+                    <div class="card">
+                        <h3 class="card-header text-uppercase">Search By City</h3>
+                        <form id="user-form" class="card-body">
+                            <input name="userCity" id="userCity" type="text" autofocus="true" class="form-input" />
+                            <button type="submit" class="btn">Search</button>
+                        </form>
+                    </div>
                 </div>
+            
+                <div class="col-12 col-md-8">
+                    <div id=weatherInfo></div>
+                    <div id=temp></div>
+                    <div id=wind></div>
+                    <div id=humidity></div>
+                    <div id=uvIndex class=uvIndex></div>
+                </div>
+
             </div>
-          
-            <div class="col-12 col-md-8">
-                <div id=weatherInfo></div>
-                <div id=temp></div>
-                <div id=wind></div>
-                <div id=humidity></div>
-                <div id=uvIndex class=uvIndex></div>
+
+            <div class =row>
+                <div class-12 col-md-4>
+                    <p>local Storage</p>
+                </div>
+
+                <div class= col-12 col-md-8>
+                    <h2>5 Day Forcast:</h2>
+                    <div id=day1>
+                        <p>Day 1</p>
+                        <div id=weatherDate1></div>
+                        <div id=weatherIcon1></div>
+                        <div id=temp1></div>
+                        <div id=wind1></div>
+                        <div id=humidity1></div>
+                    </div>
+
+                    <div id=day2>
+                        <p>Day 2</p>
+                        <div id=weatherDate2></div>
+                        <div id=weatherIcon2></div>
+                        <div id=temp2></div>
+                        <div id=wind2></div>
+                        <div id=humidity2></div>
+                    </div>
+
+                    <div id=day3>
+                        <p>Day 2</p>
+                        <div id=weatherDate3></div>
+                        <div id=weatherIcon3></div>
+                        <div id=temp3></div>
+                        <div id=wind3></div>
+                        <div id=humidity3></div>
+                    </div>
+
+                    <div id=day4>
+                        <p>Day 2</p>
+                        <div id=weatherDate4></div>
+                        <div id=weatherIcon4></div>
+                        <div id=temp4></div>
+                        <div id=wind4></div>
+                        <div id=humidity4></div>
+                    </div>
+
+                    <div id=day5>
+                        <p>Day 2</p>
+                        <div id=weatherDate5></div>
+                        <div id=weatherIcon5></div>
+                        <div id=temp5></div>
+                        <div id=wind5></div>
+                        <div id=humidity5></div>
+                    </div>
+
+                </div>
             </div>
 
         </main>
