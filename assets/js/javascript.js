@@ -233,8 +233,5 @@ var getFive = function(long, lat) {
     
         var humidity = response.daily[4].humidity;
         $("#humidity5").empty().append("Humidity: " + humidity);
-     
-
     });
-
 };
