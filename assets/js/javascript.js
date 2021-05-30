@@ -4,22 +4,46 @@ $(document).ready(function () {
 
     //when page loads display all user city inputs
 
+    keys = Object.keys(localStorage);
+    for (i=0; i < keys.length; i++) {
+        // append city to buttons
+        $('#storage').append('<button type="submit" id="' + keys[i] + '" value="' + keys[i] + '" class="btn btn-stored" >' + keys[i] + '</button>');
+    };
+    
+    // button click for stored stock tickers
+    $('.btn-stored').click(function () {
+        // find city value
+        var city = $(this).attr('value');
+
+        getWeather(city);
+
+    });
+
     // when button is clicked
-    $('.btn').click(function () {
+    $('#newInput').click(function () {
+
+        keys = Object.keys(localStorage);
 
         // variable for inputed city 
         var city = $('#userCity').val();
         var location = $('#userCity').attr('name');
 
-        // store inputs
-        localStorage.setItem(location, city);
+        // do not store null values
+        if (!city) {
+            return false
+        };
 
-        // display city name 
-        $("#weatherInfo").append(city);
+        //create button for unique searched stock
+        var checkKeys = jQuery.inArray( city, keys);
 
-        // display current date 
-        var date = moment().format('MMM Do YYYY');
-        $("#weatherInfo").append(" (" + date + ")");
+        // unique value < 0 , repeat value > 0
+        if (checkKeys < 0) {
+            
+            //local storage 
+            localStorage.setItem(city, "");
+
+            $('#storage').append('<button type="submit" id="' + city + '" value="' + city + '" class="btn btn-stored" >' + city + '</button>');
+        };
 
         getWeather(city);
 
@@ -44,6 +68,13 @@ var getWeather = function(city) {
 
     $.ajax(info).done(function (response) {
     console.log(response);
+
+    // display city name 
+    $("#weatherInfo").append(city);
+
+    // display current date 
+    var date = moment().format('MMM Do YYYY');
+    $("#weatherInfo").append(" (" + date + ")");
 
     // display icon for current weather condition 
     var url = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
