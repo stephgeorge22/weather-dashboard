@@ -70,8 +70,8 @@ var getWeather = function(city) {
     console.log(response);
 
     // display city name 
-    $("#weatherInfo").append(city);
-
+    $("#weatherInfo").empty().append(city);
+    
     // display current date 
     var date = moment().format('MMM Do YYYY');
     $("#weatherInfo").append(" (" + date + ")");
@@ -80,17 +80,17 @@ var getWeather = function(city) {
     var url = "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png";
     $("#weatherInfo").append($('<img>',{id:'temp',src:url}));
 
-    // display temperature
+    //display temperature
     var temp = response.main.temp;
-    $("#temp").append("Temp: " + temp + "°F");
+    $("#temperature").empty().append("Temp: " + temp + "°F");
 
     // display humidity 
     var humidity = response.main.humidity;
-    $("#humidity").append("Humidity: " + humidity);
+    $("#humidity").empty().append("Humidity: " + humidity);
 
     // display wind speed
     var windSpeed = response.wind.speed; 
-    $("#wind").append("Wind Speed: " + windSpeed);
+    $("#wind").empty().append("Wind Speed: " + windSpeed);
 
     // variables for uv index api call
     var long = response.coord.lon;
@@ -119,19 +119,19 @@ var getUV = function(long, lat) {
 
         // display uv index
         var uv = response.current.uvi;
-        $("#uvIndex").append("UV Index: " + uv);
+        $("#uvIndex").empty().append("UV Index: " + uv);
 
         if (uv < 3) {
             $("#uvIndex").css({'background-color':'green'});
+        }
+
+        else if (uv > 9) {
+            $("#uvIndex").css({'background-color':'red'});
+        }
+
+        else {
+            $("#uvIndex").css({'background-color':'yellow'});
         };
-
-        // else if (uv > 9) {
-        //     $("#uvIndex").css({'background-color':'red'});
-        // };
-
-        // else if {
-        //     $("#uvIndex").css({'background-color':'yellow'});
-        // };
     });
 };
 
@@ -151,88 +151,88 @@ var getFive = function(long, lat) {
 
         // DAY 1
         // display date 
-        var date = new Date(response.daily[0].dt);
-        $("#weatherDate1").append(date);
+        var date = (new Date((response.daily[0].dt)*1000)).toDateString();
+        $("#weatherDate1").empty().append(date);
 
         // display icon for current weather condition 
         var url = "http://openweathermap.org/img/wn/" + response.daily[0].weather[0].icon+ "@2x.png";
-        $("#weatherIcon1").append($('<img>',{id:'temp',src:url}));
+        $("#weatherIcon1").empty().append($('<img>',{id:'temp',src:url}));
 
         //display temp
         var temp = response.daily[0].temp.day;
-        $("#temp1").append("Temp: " + temp + "°F");
+        $("#temp1").empty().append("Temp: " + temp + "°F");
 
         //display wind speed
         var windSpeed = response.daily[0].wind_speed; 
-        $("#wind1").append("Wind Speed: " + windSpeed);
+        $("#wind1").empty().append("Wind Speed: " + windSpeed);
 
         //display humidity 
         var humidity = response.daily[0].humidity;
-        $("#humidity1").append("Humidity: " + humidity);
+        $("#humidity1").empty().append("Humidity: " + humidity);
 
         // Date 2
-        var date = new Date(response.daily[1].dt);
-        $("#weatherDate2").append(date);
+        var date = (new Date((response.daily[1].dt)*1000)).toDateString();
+        $("#weatherDate2").empty().append(date);
     
         var url = "http://openweathermap.org/img/wn/" + response.daily[1].weather[0].icon+ "@2x.png";
-        $("#weatherIcon2").append($('<img>',{id:'temp',src:url}));
+        $("#weatherIcon2").empty().append($('<img>',{id:'temp',src:url}));
     
         var temp = response.daily[1].temp.day;
-        $("#temp2").append("Temp: " + temp + "°F");
+        $("#temp2").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[1].wind_speed; 
-        $("#wind2").append("Wind Speed: " + windSpeed);
+        $("#wind2").empty().append("Wind Speed: " + windSpeed);
     
         var humidity = response.daily[1].humidity;
-        $("#humidity2").append("Humidity: " + humidity);
+        $("#humidity2").empty().append("Humidity: " + humidity);
 
         // Date 3
-        var date = new Date(response.daily[2].dt);
-        $("#weatherDate3").append(date);
+        var date = (new Date((response.daily[2].dt)*1000)).toDateString();
+        $("#weatherDate3").empty().append(date);
     
         var url = "http://openweathermap.org/img/wn/" + response.daily[2].weather[0].icon+ "@2x.png";
-        $("#weatherIcon3").append($('<img>',{id:'temp',src:url}));
+        $("#weatherIcon3").empty().append($('<img>',{id:'temp',src:url}));
     
         var temp = response.daily[2].temp.day;
-        $("#temp3").append("Temp: " + temp + "°F");
+        $("#temp3").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[2].wind_speed; 
-        $("#wind3").append("Wind Speed: " + windSpeed);
+        $("#wind3").empty().append("Wind Speed: " + windSpeed);
     
         var humidity = response.daily[2].humidity;
-        $("#humidity3").append("Humidity: " + humidity);
+        $("#humidity3").empty().append("Humidity: " + humidity);
 
         // Date 4
-        var date = new Date(response.daily[3].dt);
-        $("#weatherDate4").append(date);
+        var date = (new Date((response.daily[3].dt)*1000)).toDateString();
+        $("#weatherDate4").empty().append(date);
     
         var url = "http://openweathermap.org/img/wn/" + response.daily[3].weather[0].icon+ "@2x.png";
-        $("#weatherIcon4").append($('<img>',{id:'temp',src:url}));
+        $("#weatherIcon4").empty().append($('<img>',{id:'temp',src:url}));
     
         var temp = response.daily[3].temp.day;
-        $("#temp4").append("Temp: " + temp + "°F");
+        $("#temp4").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[3].wind_speed; 
-        $("#wind4").append("Wind Speed: " + windSpeed);
+        $("#wind4").empty().append("Wind Speed: " + windSpeed);
     
         var humidity = response.daily[3].humidity;
-        $("#humidity4").append("Humidity: " + humidity);
+        $("#humidity4").empty().append("Humidity: " + humidity);
 
         // Date 5
-        var date = new Date(response.daily[4].dt);
-        $("#weatherDate5").append(date);
+        var date = (new Date((response.daily[4].dt)*1000)).toDateString();
+        $("#weatherDate5").empty().append(date);
     
         var url = "http://openweathermap.org/img/wn/" + response.daily[4].weather[0].icon+ "@2x.png";
-        $("#weatherIcon5").append($('<img>',{id:'temp',src:url}));
+        $("#weatherIcon5").empty().append($('<img>',{id:'temp',src:url}));
     
         var temp = response.daily[4].temp.day;
-        $("#temp5").append("Temp: " + temp + "°F");
+        $("#temp5").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[4].wind_speed; 
-        $("#wind5").append("Wind Speed: " + windSpeed);
+        $("#wind5").empty().append("Wind Speed: " + windSpeed);
     
         var humidity = response.daily[4].humidity;
-        $("#humidity5").append("Humidity: " + humidity);
+        $("#humidity5").empty().append("Humidity: " + humidity);
      
 
     });
