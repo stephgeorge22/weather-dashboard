@@ -95,11 +95,11 @@ var getWeather = function(city) {
 
     // display humidity 
     var humidity = response.main.humidity;
-    $("#humidity").empty().append("Humidity: " + humidity);
+    $("#humidity").empty().append("Humidity: " + humidity + "%");
 
     // display wind speed
     var windSpeed = response.wind.speed; 
-    $("#wind").empty().append("Wind Speed: " + windSpeed);
+    $("#wind").empty().append("Wind Speed: " + windSpeed + "MPH");
 
     // variables for uv index api call
     var long = response.coord.lon;
@@ -173,11 +173,11 @@ var getFive = function(long, lat) {
 
         //display wind speed
         var windSpeed = response.daily[0].wind_speed; 
-        $("#wind1").empty().append("Wind Speed: " + windSpeed);
+        $("#wind1").empty().append("Wind Speed: " + windSpeed + "MPH");
 
         //display humidity 
         var humidity = response.daily[0].humidity;
-        $("#humidity1").empty().append("Humidity: " + humidity);
+        $("#humidity1").empty().append("Humidity: " + humidity + "%");
 
         // Date 2
         var date = (new Date((response.daily[1].dt)*1000)).toDateString();
@@ -190,10 +190,10 @@ var getFive = function(long, lat) {
         $("#temp2").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[1].wind_speed; 
-        $("#wind2").empty().append("Wind Speed: " + windSpeed);
+        $("#wind2").empty().append("Wind Speed: " + windSpeed + "MPH");
     
         var humidity = response.daily[1].humidity;
-        $("#humidity2").empty().append("Humidity: " + humidity);
+        $("#humidity2").empty().append("Humidity: " + humidity + "%");
 
         // Date 3
         var date = (new Date((response.daily[2].dt)*1000)).toDateString();
@@ -206,10 +206,10 @@ var getFive = function(long, lat) {
         $("#temp3").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[2].wind_speed; 
-        $("#wind3").empty().append("Wind Speed: " + windSpeed);
+        $("#wind3").empty().append("Wind Speed: " + windSpeed + "MPH");
     
         var humidity = response.daily[2].humidity;
-        $("#humidity3").empty().append("Humidity: " + humidity);
+        $("#humidity3").empty().append("Humidity: " + humidity + "%");
 
         // Date 4
         var date = (new Date((response.daily[3].dt)*1000)).toDateString();
@@ -222,10 +222,10 @@ var getFive = function(long, lat) {
         $("#temp4").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[3].wind_speed; 
-        $("#wind4").empty().append("Wind Speed: " + windSpeed);
+        $("#wind4").empty().append("Wind Speed: " + windSpeed + "MPH");
     
         var humidity = response.daily[3].humidity;
-        $("#humidity4").empty().append("Humidity: " + humidity);
+        $("#humidity4").empty().append("Humidity: " + humidity + "%");
 
         // Date 5
         var date = (new Date((response.daily[4].dt)*1000)).toDateString();
@@ -238,9 +238,9 @@ var getFive = function(long, lat) {
         $("#temp5").empty().append("Temp: " + temp + "°F");
     
         var windSpeed = response.daily[4].wind_speed; 
-        $("#wind5").empty().append("Wind Speed: " + windSpeed);
+        $("#wind5").empty().append("Wind Speed: " + windSpeed + "MPH");
     
         var humidity = response.daily[4].humidity;
-        $("#humidity5").empty().append("Humidity: " + humidity);
+        $("#humidity5").empty().append("Humidity: " + humidity + "%");
     });
 };
