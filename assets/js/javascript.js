@@ -43,6 +43,15 @@ $(document).ready(function () {
             localStorage.setItem(city, "");
 
             $('#storage').append('<button type="submit" id="' + city + '" value="' + city + '" class="btn btn-stored" >' + city + '</button>');
+        
+                // button click for stored stock tickers
+                $('.btn-stored').click(function () {
+                    // find city value
+                    var city = $(this).attr('value');
+
+                    getWeather(city);
+
+                });
         };
 
         getWeather(city);
