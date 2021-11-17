@@ -15,8 +15,15 @@ This application serves as an weather app that gives you the current weather and
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![AJAX](https://img.shields.io/badge/-AJAX-yellowgreen)
 
-Created a weather dashboard utilizing bootstrap, jquery and ajax. With three api calls the website features the current weather and the five day forcast with local storage to save previous city searches.
+## Deployment
+https://stephgeorge22.github.io/weather-dashboard/
+
+## Usage
+
+Enter any location into the search box and the current weather and five forecast will populate the page. As you search the locations, local storage will be enabled to store the searches as buttons under the search box. The next time you want to check the weather for New York City you can just click the button rather than typing it in! 
+<img src="./assets/images/website.png" alt="website screenshot" />
 
 ## User Story:
 AS A traveler <br />
@@ -36,8 +43,6 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history <br />
 THEN I am again presented with current and future conditions for that city <br />
 
-## Screenshot:
-<img src="./assets/images/website.png" alt="website screenshot" />
 
-## Link to Deployed Application:
-### https://stephgeorge22.github.io/weather-dashboard/
+
+
