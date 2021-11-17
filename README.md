@@ -6,9 +6,8 @@ This application serves as an weather app that gives you the current weather and
 * [Technology](#technology)
 * [Deployment](#deployment)
 * [Usage](#usage)
+* [Story](#story)
 * [Questions](#questions)
-* [User Story](#userstory)
-* [Acceptance Criteria](#acceptancecritera)
 * [License](#license)
 
 ## Technology
@@ -25,13 +24,7 @@ https://stephgeorge22.github.io/weather-dashboard/
 Enter any location into the search box and the current weather and five forecast will populate the page. As you search the locations, local storage will be enabled to store the searches as buttons under the search box. The next time you want to check the weather for Dallas you can just click the button rather than typing it in! 
 <img src="./assets/images/website.png" alt="website screenshot" />
 
-## Questions
-Hi, I'm Stephanie. If you like my work and want to connect please feel free to reach out!
-
-Github: www.github.com/stephgeorge22
-Email: stephanie.george22@gmail.com
-
-## User Story:
+## Story:
 AS A traveler <br />
 I WANT to see the weather outlook for multiple cities <br />
 SO THAT I can plan a trip accordingly <br />
@@ -48,6 +41,12 @@ WHEN I view future weather conditions for that city <br />
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity <br />
 WHEN I click on a city in the search history <br />
 THEN I am again presented with current and future conditions for that city <br />
+
+## Questions
+Hi, I'm Stephanie. If you like my work and want to connect please feel free to reach out!
+
+Github: www.github.com/stephgeorge22
+Email: stephanie.george22@gmail.com
 
 ## License 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
