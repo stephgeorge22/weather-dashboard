@@ -1,19 +1,26 @@
-# README for Weather Dashboard
+# Weather Dashboard
 
-## Description: 
+## Description
+This application serves as an weather app that gives you the current weather and five day forecast. It even stores your searches so you can access them with a click of the button at a later time!
+
+* [Technology](#technology)
+* [Deployment](#deployment)
+* [Usage](#usage)
+* [Questions](#questions)
+* [User Story] (#user)
+* [Acceptance Criteria](#acceptance)
+* [License](#license)
 
 ### Created a weather dashboard utilizing bootstrap, jquery and ajax. With three api calls the website features the current weather and the five day forcast with local storage to save previous city searches.
 
-### The changes made address the user story and acceptance criteria below:
+## User Story:
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
 
-### User Story:
-### AS A traveler
-### I WANT to see the weather outlook for multiple cities
-### SO THAT I can plan a trip accordingly
-
-### Acceptance Criteria:
-### GIVEN a weather dashboard with form inputs
-### WHEN I search for a city
+## Acceptance Criteria:
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
 ### THEN I am presented with current and future conditions for that city and that city is added to the search history
 ### WHEN I view current weather conditions for that city
 ### THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
