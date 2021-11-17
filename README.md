@@ -7,16 +7,16 @@ This application serves as an weather app that gives you the current weather and
 * [Deployment](#deployment)
 * [Usage](#usage)
 * [Questions](#questions)
-* [User Story] (#user)
+* [User Story](#user)
 * [Acceptance Criteria](#acceptance)
 * [License](#license)
 
 ### Created a weather dashboard utilizing bootstrap, jquery and ajax. With three api calls the website features the current weather and the five day forcast with local storage to save previous city searches.
 
 ## User Story:
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+AS A traveler <br />
+I WANT to see the weather outlook for multiple cities <br />
+SO THAT I can plan a trip accordingly <br />
 
 ## Acceptance Criteria:
 GIVEN a weather dashboard with form inputs
