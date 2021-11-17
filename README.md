@@ -7,8 +7,8 @@ This application serves as an weather app that gives you the current weather and
 * [Deployment](#deployment)
 * [Usage](#usage)
 * [Questions](#questions)
-* [User Story](#user)
-* [Acceptance Criteria](#acceptance)
+* [User Story](#userstory)
+* [Acceptance Criteria](#acceptancecritera)
 * [License](#license)
 
 ## Technology
